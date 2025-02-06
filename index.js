@@ -131,15 +131,20 @@ const evenRatings = ratings.filter(rating => rating % 2 === 0); // When divided 
 
 //Find - returns the first element that passes a condition that is provided by the function
 const highRating = ratings.find(rating => rating > 3); // -> Returns the first element that is greater than 3
-console.log(highRating); // -> 5
+//console.log(highRating); // -> 5
 
 //ForEach - executes a provided function once for each array element
 //students.forEach(student => console.log(`This student, ${student}, is enrolled!`)); // -> Logs each student name
 
 //Map - creates a new array and executes the provided function on every item in the array
-const studentGreetings = students.map(student => console.log(`Hello ${student}!`)); // -> Creates a new array with greetings
+//const studentGreetings = students.map(student => console.log(`Hello ${student}!`)); // -> Creates a new array with greetings
 
 //Reduce - takes each item of an array and reduces to a single value (based on a function we provide and the accumulator)
 const cart =[7, 3, 9, 2, 8, 5.99];
 const cartTotal = cart.reduce((acc, price) => acc + price)
-console.log(cartTotal); 
+//console.log(cartTotal); 
+
+//Sort - sorts the elements of an array in place and returns the sorted array
+//const sortedCart = cart.sort((a, b) => a - b); // -> Sorts the cart in ascending order
+// console.log(sortedCart);
+
