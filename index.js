@@ -24,8 +24,14 @@ const grades = [90, 88, 78, 95, 85];
 // const student1 = students[0]; // -> Accessing the first element
 // console.log(student1);
 
-const [student1, student2,,student3] = students;
+//const [student1, student2,,student3] = students;
 //console.log(student1, student2, student3); // -> Jane Doe Ted - skipping the 3rd element
+
+const studentsWithGrades = students.map((name, index) => ({
+    name, grade: grades[index] // -> Creating an object with name and grade
+}))
+
+console.log(studentsWithGrades);
 
 //Object
 const Player = {
@@ -86,3 +92,43 @@ const player2 = {
 
 console.log(Player);
 console.log(player2);
+
+//Imperative programming - How to do something (Steps required)
+//Declarative programming - What to do (What is required)
+
+//which grades are even
+
+//Declarative
+// for (const grade of grades){
+//     if (grade % 2 === 0){ // -> Checking if the grade is even
+//         console.log(`${grade} is even`);
+//     }
+// }
+
+/*
+grades.map(grade => {
+    if (grade % 2 === 0){ // -> If the remainder is 0, then it is even
+        console.log(`${grade} is even`); 
+    }
+})
+    */
+
+//grades.map(grade => (grade % 2 === 0 ? console.log(`${grade} is even`): console.log(`${grade} is odd`)));
+
+//Declarative
+/*
+grades.map(grade => {
+    if (grade % 2 === 0){
+        return console.log(`${grade} is even`);
+    }
+})
+    */
+
+//Filter - creates a new array with all elements that pass a condition that is provided by the function
+const ratings = [3, 2, 5, 3, 4, 1];
+const evenRatings = ratings.filter(rating => rating % 2 === 0); // When divided by 2 then remainder is 0, it is even.
+// console.log(evenRatings);
+
+//Find - returns the first element that passes a condition that is provided by the function
+const highRating = ratings.find(rating => rating > 3); // -> Returns the first element that is greater than 3
+console.log(highRating); // -> 5
